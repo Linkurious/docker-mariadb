@@ -1,0 +1,14 @@
+---
+
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:10.5.5-focal
+    restart: unless-stopped
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=1
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - "${MYSQL_HOST_BIND:-3306}:3306"

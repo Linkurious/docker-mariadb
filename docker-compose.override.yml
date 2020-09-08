@@ -1,0 +1,8 @@
+---
+
+version: '3.8'
+
+services:
+  mariadb:
+    volumes:
+      - ./.my.cnf:/root/.my.cnf
