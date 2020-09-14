@@ -244,4 +244,4 @@ com_crashlytics_export_strings.xml
 .env*
 !.env.example
 #sql files
-docker-entrypoint-initdb/
+docker-entrypoint-initdb.d/
