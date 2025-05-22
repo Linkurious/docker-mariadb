@@ -5,9 +5,6 @@ mariadb:
     persistence:
       enabled: false
 
-  passwordUpdateJob:
-    enabled: true
-
   metrics:
     enabled: true
     serviceMonitor:
