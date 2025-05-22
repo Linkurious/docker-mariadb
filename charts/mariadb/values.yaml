@@ -5,3 +5,7 @@ mariadb:
     persistence:
       enabled: false
 
+  metrics:
+    enabled: true
+    serviceMonitor: true
+
