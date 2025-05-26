@@ -245,3 +245,7 @@ com_crashlytics_export_strings.xml
 !.env.example
 #sql files
 docker-entrypoint-initdb.d/
+
+# Helm
+charts/*/Chart.lock
+charts/*/template.yaml
