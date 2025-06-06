@@ -13,6 +13,8 @@ if ctx.endswith('k8s-preprod'):
 if not k8s_namespace().endswith("dev"):
   fail("You are not targeting a dev namespace")
 builder = "builder-" + k8s_namespace()
+print('Installing Helm dependencies')
+local_resource('chart','rm charts/mariadb/Chart.lock; helm dependency build charts/mariadb/')
 
 mariadb_workload_name = 'mariadbv5'
 mariadb_release_name = ctx.removesuffix('@k8s-preprod') + '-tilt-mariadbv5'
